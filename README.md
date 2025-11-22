@@ -1,10 +1,8 @@
-# 🕵️‍♂️ X Profil Analizi (Teşkilatsız)
+#X Profil Analizi (Teşkilatsız)
 
 **X Profil Analizi**, yapay zeka kullanarak X kullanıcılarını derinlemesine inceleyen, karakter özelliklerini çıkaran ve görsel veriler sunan gelişmiş bir web uygulamasıdır.
 
 ![Proje Önizleme](https://i.hizliresim.com/rmvm8hy.png)
-
-## 🌟 Özellikler ve Modlar
 
 Uygulama 4 farklı analiz modu sunar:
 
