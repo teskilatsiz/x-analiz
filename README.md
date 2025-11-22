@@ -118,4 +118,5 @@ Eğer projeyi geliştirmek ve kendi bilgisayarınızda test etmek istiyorsanız:
 
 **Not:** Yerelde çalışırken API anahtarını tanıtmak için proje ana dizininde `.env` adında bir dosya oluşturup içine şunu yazmalısınız:
 RAPID_API_KEY=api_anahtariniz_buraya_gelecek
+
 *(Bu .env dosyasını GitHub'a yüklemeyin!)*
