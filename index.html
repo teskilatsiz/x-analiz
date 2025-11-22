@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>X Profil Analizi | Teşkilatsız</title>
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="X Profil Analizi">
+    <meta property="og:description" content="Yapay zeka ile profilini analiz et.">
+    <meta property="og:image" content="https://i.hizliresim.com/1vjaf1y.png">
+    <meta property="og:url" content="https://x-kisilik.netlify.app/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://i.hizliresim.com/1vjaf1y.png">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💀</text></svg>">
+    <link rel="stylesheet" href="stil.css">
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wordcloud2.js/1.2.2/wordcloud2.min.js"></script>
+</head>
+<body>
+    <div class="uygulama-kapsayici">
+        <header onclick="location.reload()">X ANALİZ // TEŞKİLATSIZ</header>
+
+        <div class="ekran aktif" id="menu-ekrani">
+            <div class="icerik-merkez">
+                <h1>MOD SEÇİMİ</h1>
+                <p class="alt-metin">Analiz türünü belirle.</p>
+                <div class="menu-grid">
+                    <div class="menu-item" onclick="modSec('tekli')">
+                        <div class="menu-baslik">KİŞİLİK ANALİZİ</div>
+                        <div class="menu-aciklama">Karakter & Siyaset</div>
+                    </div>
+                    <div class="menu-item" onclick="modSec('vs')">
+                        <div class="menu-baslik">KAPIŞTIR</div>
+                        <div class="menu-aciklama">İki Profili Kıyasla</div>
+                    </div>
+                    <div class="menu-item" onclick="modSec('bulut')">
+                        <div class="menu-baslik">KELİME BULUTU</div>
+                        <div class="menu-aciklama">En Çok Konuşulanlar</div>
+                    </div>
+                    <div class="menu-item" onclick="modSec('grafik')">
+                        <div class="menu-baslik">AKTİVİTE GRAFİĞİ</div>
+                        <div class="menu-aciklama">Aktif Saatler</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="ekran" id="giris-ekrani">
+            <button class="geri-btn" onclick="ekranGoster('menu')">GERİ DÖN</button>
+            <div class="icerik-merkez">
+                <h1 id="giris-baslik">ANALİZ</h1>
+                <p class="alt-metin" id="giris-aciklama">Kullanıcı adını gir.</p>
+                
+                <div class="girdi-grubu" id="tekli-input-alani">
+                    <div class="girdi-kutusu">
+                        <span class="onek">@</span>
+                        <input type="text" id="kullanici-adi-input" placeholder="kullaniciadi" autocomplete="off">
+                    </div>
+                </div>
+
+                <div class="girdi-grubu" id="vs-input-alani" style="display:none;">
+                    <div class="vs-wrapper">
+                        <div class="girdi-kutusu vs-input">
+                            <span class="onek">1</span>
+                            <input type="text" id="vs-user-1" placeholder="kullanici1" autocomplete="off">
+                        </div>
+                        <div class="vs-ortasi">VS</div>
+                        <div class="girdi-kutusu vs-input">
+                            <span class="onek">2</span>
+                            <input type="text" id="vs-user-2" placeholder="kullanici2" autocomplete="off">
+                        </div>
+                    </div>
+                </div>
+
+                <button class="baslat-btn" onclick="reklamSureciniBaslat()">BAŞLAT</button>
+            </div>
+        </div>
+
+        <div class="ekran" id="yukleme-ekrani">
+            <div class="radar"></div>
+            <div class="terminal" id="terminal-metni">> Bağlantı kuruluyor...</div>
+        </div>
+
+        <div class="ekran" id="sonuc-ekrani">
+            <div id="sonuc-icerik-alani"></div>
+            <div class="alt-navigasyon">
+                 <button class="restart-link" onclick="location.reload()">ANA MENÜYE DÖN</button>
+            </div>
+        </div>
+
+        <div class="modal-overlay" id="reklam-modali" style="display: none;">
+            <div class="modal-kutu reklam-kutu">
+                <p class="reklam-etiketi">SPONSORLU</p>
+                <div class="reklam-alani">
+                    <video id="reklam-video" src="https://s181.convertio.me/p/lYeDey9R1aNfDW0Qavv7og/59fa5e35093d825b9c02bdb531340cd1/ssstwitter.com_1763815498829.mp4" 
+                           playsinline></video>
+                </div>
+                <button id="reklam-gec-btn" class="modal-btn reklam-kapat-btn disabled-btn" onclick="reklamiGec()" disabled>
+                    5
+                </button>
+            </div>
+        </div>
+
+        <div class="modal-overlay" id="hata-modali">
+            <div class="modal-kutu">
+                <div class="modal-ikon">⚠️</div>
+                <h3 id="modal-baslik">Hata</h3>
+                <p id="modal-mesaj">Bir sorun oluştu.</p>
+                <button class="modal-btn" onclick="modaliKapat()">TAMAM</button>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="analiz.js"></script>
+</body>
+</html>
