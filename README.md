@@ -2,8 +2,6 @@
 
 **X Profil Analizi**, yapay zeka kullanarak X kullanıcılarını derinlemesine inceleyen, karakter özelliklerini çıkaran ve görsel veriler sunan gelişmiş bir web uygulamasıdır.
 
-![Proje Önizleme](https://i.hizliresim.com/rmvm8hy.png)
-
 Uygulama 4 farklı analiz modu sunar:
 
 ### 1. 🧠 Kişilik Analizi (Tekli Mod)
