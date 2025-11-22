@@ -16,11 +16,11 @@ Uygulama 4 farklı analiz modu sunar:
 * Kazananı ve sebebini eğlenceli bir dille açıklar.
 
 ### 3. ☁️ Kelime Bulutu
-* Kullanıcının son tweetlerinde en sık kullandığı kelimeleri analiz eder.
+* Kullanıcının son gönderilerinde en sık kullandığı kelimeleri analiz eder.
 * Görsel bir kelime bulutu oluşturur.
 
 ### 4. 📊 Aktivite Grafiği
-* Kullanıcının tweet atma alışkanlıklarını analiz eder.
+* Kullanıcının gönderi paylaşma alışkanlıklarını analiz eder.
 * Günün hangi saatlerinde aktif olduğunu grafiksel olarak gösterir.
 
 ---
